@@ -16,8 +16,9 @@ import matplotlib.pyplot as plt
 
 # In[2]:
 
-#id=27555
-id = 10
+start_id=0
+end_id=100
+#id = 10
 
 def scraping_web_page(url):
     sleep(5)
@@ -48,7 +49,7 @@ def get_url(id_num):
 
 
 def get_lyrics():
-    infos = [get_url(i) for i in range(0,id)]
+    infos = [get_url(i) for i in range(start_id,end_id)]
     for info in infos:
         for name,kashi in info:
             kashi = kashi.replace('\u3000', '')
